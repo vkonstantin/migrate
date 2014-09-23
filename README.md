@@ -1,19 +1,19 @@
 # migrate
 
-[![Build Status](https://travis-ci.org/mattes/migrate.svg?branch=master)](https://travis-ci.org/mattes/migrate)
-[![GoDoc](https://godoc.org/github.com/mattes/migrate?status.svg)](https://godoc.org/github.com/mattes/migrate)
+[![Build Status](https://travis-ci.org/vkonstantin/migrate.svg?branch=master)](https://travis-ci.org/vkonstantin/migrate)
+[![GoDoc](https://godoc.org/github.com/vkonstantin/migrate?status.svg)](https://godoc.org/github.com/vkonstantin/migrate)
 
 A migration helper written in Go. Use it in your existing Golang code 
 or run commands via the CLI. 
 
 ```
-GoCode   import github.com/mattes/migrate/migrate
-CLI      go get github.com/mattes/migrate
+GoCode   import github.com/vkonstantin/migrate/migrate
+CLI      go get github.com/vkonstantin/migrate
 ```
 
 __Features__
 
-* Super easy to implement [Driver interface](http://godoc.org/github.com/mattes/migrate/driver#Driver).
+* Super easy to implement [Driver interface](http://godoc.org/github.com/vkonstantin/migrate/driver#Driver).
 * Gracefully quit running migrations on ``^C``.
 * No magic search paths routines, no hard-coded config files.
 * CLI is build on top of the ``migrate package``.
@@ -21,20 +21,20 @@ __Features__
 
 ## Available Drivers
 
- * [PostgreSQL](https://github.com/mattes/migrate/tree/master/driver/postgres)
- * [Cassandra](https://github.com/mattes/migrate/tree/master/driver/cassandra)
- * SQLite ([planned](https://github.com/mattes/migrate/issues/2))
- * MySQL ([planned](https://github.com/mattes/migrate/issues/1))
+ * [PostgreSQL](https://github.com/vkonstantin/migrate/tree/master/driver/postgres)
+ * [Cassandra](https://github.com/vkonstantin/migrate/tree/master/driver/cassandra)
+ * SQLite ([planned](https://github.com/vkonstantin/migrate/issues/2))
+ * MySQL ([planned](https://github.com/vkonstantin/migrate/issues/1))
  * Bash (planned)
 
-Need another driver? Just implement the [Driver interface](http://godoc.org/github.com/mattes/migrate/driver#Driver) and open a PR.
+Need another driver? Just implement the [Driver interface](http://godoc.org/github.com/vkonstantin/migrate/driver#Driver) and open a PR.
 
 
 ## Usage from Terminal
 
 ```bash
 # install
-go get github.com/mattes/migrate
+go get github.com/vkonstantin/migrate
 
 # create new migration file in path
 migrate -url driver://url -path ./migrations create migration_file_xyz
@@ -68,10 +68,10 @@ migrate -url driver://url -path ./migrations migrate -n
 
 ## Usage in Go
 
-See GoDoc here: http://godoc.org/github.com/mattes/migrate/migrate
+See GoDoc here: http://godoc.org/github.com/vkonstantin/migrate/migrate
 
 ```go
-import "github.com/mattes/migrate/migrate"
+import "github.com/vkonstantin/migrate/migrate"
 
 // use synchronous versions of migration functions ...
 allErrors, ok := migrate.UpSync("driver://url", "./path")
